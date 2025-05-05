@@ -1,3 +1,5 @@
+// toMatch() : 정규식 기반의 테스트가 필요할 때 사용
+
 import { getUser } from "./user";
 
 test("string", () => {
