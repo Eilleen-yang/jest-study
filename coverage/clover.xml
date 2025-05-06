@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1746509785741" clover="3.2.0">
+  <project timestamp="1746509785741" name="All files">
+    <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1" elements="4" coveredelements="4" complexity="0" loc="1" ncloc="1" packages="1" files="1" classes="1"/>
+    <file name="LoginStatus.jsx" path="/Users/yang-areum/Desktop/goorm/frontend/jest-study/src/_components/LoginStatus.jsx">
+      <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <line num="2" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>

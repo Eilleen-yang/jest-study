@@ -100,7 +100,7 @@ npm install -D @types/jest @babel/core @babel/preset-env
 
 <br/>
 
-## 리액트 컴포넌트 테스트
+## 리액트 컴포넌트 테스트 설정
 
 Jest 가 JSX 를 이해할 수 있도록 하는 과정
 
@@ -133,13 +133,38 @@ import "@testing-library/jest-dom";
 
 <br/>
 
-리액트 컴포넌트를 구현하면서 사용된 테스트코드 간략 설명
+### 리액트 컴포넌트를 구현하면서 사용된 테스트코드 간략 설명
 
-- `render()` 로 컴포넌트를 렌더링
-- `screen.getByText()` 는 텍스트 기반 요소 탐색
-- `fireEvent.click()` 을 사용해 사용자 클릭 이벤트를 시뮬레이션
-- `toBeInTheDocument()` 는 해당 요소가 실제로 렌더링되었는지를 확인
+- `Counter Component TEST`
+  - `render()` 로 컴포넌트를 렌더링
+  - `screen.getByText()` 는 텍스트 기반 요소 탐색
+  - `fireEvent.click()` 을 사용해 사용자 클릭 이벤트를 시뮬레이션
+  - `toBeInTheDocument()` 는 해당 요소가 실제로 렌더링되었는지를 확인
 
-```
+<br/>
 
-```
+- `INPUT Component TEST`
+  - `fireEvent.change()` 를 사용해 input 필드에 값을 입력
+  - `target: { value: '값' }` 을 넘기면 사용자가 입력한 것처럼 동작
+  - 화면에 변화된 텍스트가 반영되는지 확인한다.
+
+<br/>
+
+- `LOGIN Status TEST`
+
+  - isLoggedIn이 true면 “환영합니다!” 표시
+  - isLoggedIn이 false면 “로그인이 필요합니다.” 표시
+
+- 추가 TEST
+  - 토글 버튼 (ToggleButton 컴포넌트)
+  - 입력 필드와 제출 (NameForm 컴포넌트)
+  - 조건부 렌더링 리스트 (TodoList 컴포넌트)
+
+### `@testing-library/react`란
+
+| 항목                 | Jest                                        | @testing-library/react                          |
+| -------------------- | ------------------------------------------- | ----------------------------------------------- |
+| 역할                 | 테스트 실행기(Test Runner) + Assertion 도구 | React UI 컴포넌트를 테스트하는 도구 모음        |
+| 핵심 기능            | `test`, `expect`, `jest.fn()` 등            | `render`, `screen`, `fireEvent`, `userEvent` 등 |
+| JSX 렌더링 지원 여부 | 기본 지원 안함 (`babel-jest` 필요)          | JSX 컴포넌트 렌더링 지원 (`render()`)           |
+| 주로 사용하는 목적   | 논리적 함수, 유닛 테스트                    | 컴포넌트 UI 및 이벤트 기반 테스트               |

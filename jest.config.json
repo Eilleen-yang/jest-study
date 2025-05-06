@@ -1,4 +1,9 @@
 {
   "verbose": true,
-  "collectCoverage:": true
+  "collectCoverage": true,
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": ["<rootDir>/jest.setup.js"],
+  "moduleNameMapper": {
+    "\\.(css|scss)$": "identity-obj-proxy"
+  }
 }
